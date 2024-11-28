@@ -111,6 +111,7 @@
         }
       }
     </style>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc6Ao0qAAAAABEzKlAo8_vFcpZ6hPkYj9P5DoMk"></script>
   </head>
   <body>
     <div class="form-container">
@@ -164,8 +165,23 @@
           >
         </div>
 
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          class="g-recaptcha"
+          data-sitekey="6Lc6Ao0qAAAAABEzKlAo8_vFcpZ6hPkYj9P5DoMk"
+          data-callback="onSubmit"
+          data-action="submit"
+        >
+          Submit
+        </button>
       </form>
+
+      <script>
+        function onSubmit(token) {
+          console.log("reCAPTCHA token:", token);
+          // document.getElementById("demo-form").submit();
+        }
+      </script>
     </div>
   </body>
 </html>
