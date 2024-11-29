@@ -110,6 +110,14 @@
           padding: 20px;
         }
       }
+
+      .g-recaptcha .g-recaptcha-response {
+        display: block !important;
+      }
+      .g-recaptcha > div {
+        height: auto !important;
+        min-height: 80px;
+      }
     </style>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
@@ -164,7 +172,7 @@
             >I agree to the Privacy Policy</label
           >
         </div>
-
+        <br />
         <div class="form-group">
           <div
             class="g-recaptcha"
